@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { addTitleState, addTitleStateLength } from '@/store/addTitleState';
+import { addTitleState, addTitleStateLength } from '@/states/addTitleState';
 import './addTask.css';
 import { Tasks } from '@/types/tasks';
 
@@ -10,7 +10,7 @@ const AddTask = () => {
 
   return (
     <div className="taskField">
-      <div>{addTitleLength}個のタスクがあります</div>
+      <div>{addTitle.length}個のタスクがあります</div>
       <ul>
         {addTitle.map((task: Tasks) => (
           <li key={task.id}>{task.title}</li>
