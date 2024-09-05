@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCallback } from 'react';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { addTitleState } from '@/states/addTitleState';
 import './inputTask.css';
 
@@ -8,8 +8,10 @@ const getKey = () => Math.random().toString(32).substring(2); // 0〜1未満の�
 
 const InputTask = () => {
   const [title, setTitle] = useState('');
-  const addTitle = useRecoilValue(addTitleState);
-  const setAddTitle = useSetRecoilState(addTitleState);
+  // const addTitle = useRecoilValue(addTitleState);
+  // const setAddTitle = useSetRecoilState(addTitleState);
+
+  const [addTitle, setAddTitle] = useRecoilState(addTitleState);
 
   const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
