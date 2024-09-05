@@ -1,0 +1,19 @@
+.taskField {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.taskField ul {
+  text-align: left;
+  list-style: none;
+}
+
+.taskField ul li {
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-left: -38px;
+  background-color: white;
+  border: 1px solid black;
+  border: none;
+  box-shadow: 1px 2px 2px 1px rgb(106 106 106 / 29%);
+}
